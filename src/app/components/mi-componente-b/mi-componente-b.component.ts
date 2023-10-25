@@ -15,10 +15,10 @@ export class MiComponenteBComponent implements OnInit {
   mensaje:string='';
 
   ngOnInit():void{
-    this.mensaje = this._router.snapshot.paramMap.get('mensaje') || '';
-    // this._router.queryParams.subscribe(params => {
-    //   this.mensaje = params['mensaje']
-    // });
+    // this.mensaje = this._router.snapshot.paramMap.get('mensaje') || '';
+    this._router.queryParams.subscribe(params => {
+      this.mensaje = params['mensaje'] || '';
+    });
   }
 
 }

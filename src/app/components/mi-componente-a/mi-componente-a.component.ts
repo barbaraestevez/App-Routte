@@ -12,7 +12,7 @@ export class MiComponenteAComponent {
 
   }
   enviarFormulario(mensaje:string){
-    this._router.navigate(['componente-b'], { queryParams: { mensaje: mensaje } } );
+    this._router.navigate(['/componente-b',{mensaje:mensaje}]); //{ queryParams: { mensaje: mensaje } }
   }
 
 }
